@@ -38,6 +38,11 @@ jobs:
       - name: 'Git pull the latest code'
         run: git pull
 
+      - name: 'Check Current Directory'
+        run: |
+          echo $PWD
+          ls -la
+
       - name: 'Install the dependencies'
         run: |
           rm -rf node_modules package-lock.json
