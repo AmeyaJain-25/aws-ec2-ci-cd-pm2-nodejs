@@ -35,20 +35,20 @@ jobs:
       - name: 'Kill all running pm2 processes'
         run: pm2 kill
 
-      -name: "Git pull the latest code" 
+      - name: 'Git pull the latest code'
         run: git pull
 
-      - name: "Install the dependencies"
+      - name: 'Install the dependencies'
         run: |
           sudo rm -rf node_modules package-lock.json
           sudo npm install
 
-      - name: "Start the PM2 action"
+      - name: 'Start the PM2 action'
         run: sudo pm2 start ecosystem.config.js --name "nodejs-app"
 
-      - name: "Save the PM2 action"
+      - name: 'Save the PM2 action'
         run: sudo pm2 save
-        
+
       - run: ls -la
       - run: echo $PWD
       - run: sudo pm2 list
