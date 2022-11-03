@@ -54,11 +54,7 @@ jobs:
       - name: 'Save the PM2 action'
         run: pm2 save
 
-      - run: ls -la
-      - run: echo $PWD
       - run: pm2 list
-      - run: pm2 logs nodejs-app
-      - run: pm2 status nodejs-app
 
   # start:
   #   runs-on: ubuntu-latest
