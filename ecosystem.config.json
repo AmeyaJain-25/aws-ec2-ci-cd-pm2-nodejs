@@ -1,0 +1,10 @@
+{
+  "apps": [
+    {
+      "name": "aws-ec2-ci-cd-pm2-nodejs",
+      "script": "app.js",
+      "cwd": "/home/ubuntu/aws-ec2-ci-cd-pm2-nodejs",
+      "watch": false
+    }
+  ]
+}
