@@ -66,10 +66,7 @@ jobs:
           echo $PWD
           ls -la
 
-      - name: 'Start the PM2 action'
-        run: pm2 start ecosystem.config.json --name "nodejs-app"
-
-      - name: 'Save the PM2 action'
-        run: pm2 save
+      - name: 'Start & Save the PM2 action'
+        run: pm2 startOrRestart ecosystem.config.json --name "nodejs-app" && pm2 save
 
       - run: pm2 list
