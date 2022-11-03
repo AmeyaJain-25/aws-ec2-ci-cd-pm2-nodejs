@@ -49,7 +49,7 @@ jobs:
           npm install
 
       - name: 'Start the PM2 action'
-        run: pm2 start ecosystem.config.js --name "nodejs-app"
+        run: pm2 start ./ecosystem.config.js --name "nodejs-app"
 
       - name: 'Save the PM2 action'
         run: pm2 save
