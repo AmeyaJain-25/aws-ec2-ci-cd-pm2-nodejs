@@ -40,20 +40,20 @@ jobs:
 
       - name: 'Install the dependencies'
         run: |
-          sudo rm -rf node_modules package-lock.json
-          sudo npm install
+          rm -rf node_modules package-lock.json
+          npm install
 
       - name: 'Start the PM2 action'
-        run: sudo pm2 start ecosystem.config.js --name "nodejs-app"
+        run: pm2 start ecosystem.config.js --name "nodejs-app"
 
       - name: 'Save the PM2 action'
-        run: sudo pm2 save
+        run: pm2 save
 
       - run: ls -la
       - run: echo $PWD
-      - run: sudo pm2 list
-      - run: sudo pm2 logs nodejs-app
-      - run: sudo pm2 status nodejs-app
+      - run: pm2 list
+      - run: pm2 logs nodejs-app
+      - run: pm2 status nodejs-app
 
   # start:
   #   runs-on: ubuntu-latest
